@@ -48,16 +48,15 @@ async def predict(file: UploadFile = File(...)):
         x1, y1, x2, y2 = map(int, box.xyxy[0])
 
         # Blur warranty_qr(hide)
-          if label == "warranty_qr(hide)":
-              roi = img[y1:y2, x1:x2]
-              blurred = cv2.GaussianBlur(roi, (45, 45), 0)
-              img[y1:y2, x1:x2] = blurred
+        if label == "warranty_qr(hide)":
+            roi = img[y1:y2, x1:x2]
+            blurred = cv2.GaussianBlur(roi, (45, 45), 0)
+            img[y1:y2, x1:x2] = blurred
 
         # Draw bounding box
         cv2.rectangle(img, (x1, y1), (x2, y2), color=(0, 255, 0), thickness=2)
         label_text = f"{label} {conf:.2f}"
-        cv2.putText(img, label_text, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX,
-                    0.6, (0, 255, 0), 2)
+        cv2.putText(img, label_text, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
 
     # Save processed image
     output_filename = f"output_{uuid.uuid4().hex}.jpg"
