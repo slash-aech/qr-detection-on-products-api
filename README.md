@@ -11,7 +11,6 @@ This project provides an API that scans uploaded images for QR codes—especiall
 
 **Response:**  
 - Processed image (JPEG) with bounding boxes
-- Header: `X-QR-Status` indicating QR detection result
 
 ## How to Run Locally
 
