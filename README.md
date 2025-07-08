@@ -1,6 +1,6 @@
-# YOLO QR Detection API
+# QR Detection API
 
-This project provides an API endpoint to detect and blur QR codes from uploaded images using a custom-trained YOLO model.
+This project provides an API that scans uploaded images for QR codes—especially those that may contain sensitive information like warranty details—and automatically blurs them using a custom-trained YOLO model.
 
 ## Endpoint
 
