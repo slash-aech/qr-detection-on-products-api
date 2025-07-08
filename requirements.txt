@@ -1,10 +1,4 @@
-fastapi
-uvicorn
-python-multipart
-pillow
-opencv-python
+flask
+flask-cors
 ultralytics
-python-multipart
-python-dotenv
-requests
-fastapi[all]
+opencv-python
